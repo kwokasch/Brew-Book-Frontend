@@ -59,9 +59,9 @@ html, body {
     align-content: center;
     background-size: cover;
     background-position: center;
-    width: 500px;
-    height: 100%;
-    margin-left: 2rem;
+    justify-items: center;
+    width: 650px;
+    height: 110%;
 }
 
 #nav-bar {
@@ -71,45 +71,11 @@ html, body {
     background-position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 5rem;    
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
-    padding-right: 4rem;
     box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.975);
-}
-
-#nav-buttons{
-    display: flex;
-    background-image: url("Beer mug.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    margin-top: 10px;  
-}
-
-#nav-buttons:hover {
-    transform: scale(1.05);
-}
-
-
-#favorites {
-    display: flex;
-    line-height: 10px;
-    text-decoration: none;
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-    font-weight: bold;
-    font-size: 30px;
-    color: rgb(214, 105, 3); 
-    text-shadow: 1px 2px white;
-    align-content: center;
-    justify-items: center;
-    margin-top: 5px;
 }
 
 #login {
@@ -126,10 +92,10 @@ html, body {
     background-color: rgb(255, 162, 0);
     align-items: center;
     justify-content: center;
-    width: 450px;
-    height: 350px;
+    width: 470px;
+    height: 400px;
     margin: 5px;
-    margin-top: 100px;
+    margin-top: 80px;
     padding: 8px;
     border-radius: 7px;
     box-shadow: -1px 1px 5px 2px rgba(128, 128, 128, 0.521);
@@ -154,7 +120,7 @@ html, body {
     width: 70%;
     font-family: 'Pacifico', cursive;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     align-self: center;
     border-radius: 3px;

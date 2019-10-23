@@ -72,6 +72,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     height: 5rem;    
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
@@ -79,20 +80,29 @@ html, body {
     box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.975);
 }
 
-#nav-buttons{
+#nav-buttons {
     display: flex;
+    justify-content: flex-end;
+    background-position: fixed;
+    width: 30%;
+}
+
+#favorites-button{
+    display: block;
     background-image: url("Beer mug.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
     justify-content: center;
+    align-content: center;
     width: 100px;
     height: 100px;
     border-radius: 5px;
-    margin-top: 10px;  
+    margin-top: 10px; 
+    margin-right: 40px; 
 }
 
-#nav-buttons:hover {
+#favorites-button:hover {
     transform: scale(1.05);
 }
 
@@ -107,8 +117,41 @@ html, body {
     color: rgb(214, 105, 3); 
     text-shadow: 1px 2px white;
     align-content: center;
-    justify-items: center;
+    justify-content: center;
     margin-top: 5px;
+}
+
+#logout {
+    display: block;
+    line-height: 120%;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(214, 105, 3); 
+    text-shadow: 1px 2px white;
+    align-content: center;
+    margin-top: -10px;
+    margin-right: 10px;
+}
+
+#logout-button{
+    display: flex;
+    background-image: url("Beer mug.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 10px;  
+    margin-right: 20px;
+}
+
+#logout-button:hover {
+    transform: scale(1.05);
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -288,7 +331,7 @@ label {
 #card-section {
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 100%;
 }
 
 #beer-cards {
