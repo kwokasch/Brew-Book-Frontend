@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="app.css"> -->
+    <link rel="stylesheet" href="beer.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,500i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <title>Brew Book</title>
+</head>
+<body>
+    <header>
+        <section id="nav-bar">
+            <div id="logo"></div>
+            <div id="nav-buttons">
+                    <a id="favorites" href="favorites.html">Favorites</a>
+            </div>  
+        </section>
+    </header>
+    <section id="card-section">
+        <div id="beer-forms">
+            <form id="add-beer" class="add-beer" method="POST" action="http://localhost:3000/beers">
+                <h2>Add a beer:</h2>
+                <label for="beer-name">Beer Name</label>
+                <input id="beer-name" type="text" placeholder="Fat Tire, Blue Moon..." name="name"/>
+                <label for="beer-variety">Beer Variety</label>
+                <input id="beer-variety" type="text" placeholder="Amber, IPA..." name="variety"/>
+                <label for="beer-rating">Beer Rating</label>
+                <select id="beer-rating" name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="beer-comments">Comments</label>
+                <textarea id="beer-comments" rows="3" cols="80" name="comments" placeholder="ex: I really enjoyed this beer!..."></textarea>
+                <input class="submit-button" type="submit" value="Add Beer"/>  
+            </form>
+            <form id="beer-search" class="search" method="POST" action="http://localhost:3000/searches">
+                <h2>Search for a beer:</h2>
+                <label for="beer-name">Beer Name</label>
+                <input id="beer-input" type="text" placeholder="Fat Tire, Blue Moon..." name="name"/>
+                <input class="beer-search-submit" type="submit" value="Search"/>  
+            </form>
+        </div>
+        <div id="beer-cards"></div>
+    </section>
+
+    <script src="app.js"></script>
+    <script src="beer.js"></script>
+</body>
+</html>

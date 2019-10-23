@@ -1,0 +1,359 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,500i,600,600i,700,700i,800,800i&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: url("Stripes.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+#logo {
+    background-image: url("Logo.png");
+    align-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+#nav-bar {
+    background-image: url("Banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;    
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    padding-right: 4rem;
+    box-shadow: 0px 1px 8px 1px rgba(110, 110, 110, 0.975);
+}
+
+#nav-buttons{
+    display: flex;
+    background-image: url("Beer mug.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 10px;  
+}
+
+#nav-buttons:hover {
+    transform: scale(1.05);
+}
+
+#favorites {
+    display: flex;
+    line-height: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(214, 105, 3); 
+    text-shadow: 1px 2px white;
+    align-content: center;
+    justify-items: center;
+    margin-top: 5px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: gray;
+    font-style: italic;
+  }
+
+#beer-forms {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 162, 0);
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    height: 520px;
+    margin: 5px;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: -1px 1px 5px 2px rgba(128, 128, 128, 0.521);
+}
+
+label {
+    display: inline-flex;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 100px;
+}
+
+#add-beer > h2 {
+    color: rgba(150, 72, 0, 0.801);
+    width: 70%;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    align-self: center;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+#add-beer {
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    justify-content: center;
+    width: 90%;
+    background-color: rgba(252, 231, 193, 0.781);
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.submit-button {
+    margin: 8px;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+    font-size: 14px;
+    color: rgb(128, 128, 128);  
+    height: 22px;
+    width: auto;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+.submit-button:hover {
+    background-color: rgba(252, 142, 40, 0.575); 
+    color: white;
+}
+
+#beer-name, #beer-variety {
+    margin: 8px;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;   
+    height: 22px;
+    width: auto;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+#beer-rating {
+    display: inline;
+    margin: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    width: 50px;
+    height: 22px;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+
+#beer-comments {
+    margin: 8px;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    height: 50px;
+    width: auto;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+.beer-comments {
+    font-size: 18px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+#beer-search > h2 {
+    color: rgba(150, 72, 0, 0.801);
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    align-self: center;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#beer-search {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    text-align: center;
+    width: 90%;
+    background-color: rgba(252, 231, 193, 0.781);
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.search input[type=submit] {
+    background: url(https://www.freeiconspng.com/uploads/search-icon-png-1.png) no-repeat center;
+    background-size: 40px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-indent: -9999em;
+}
+
+.search input[type=submit]:hover {
+    background-color: rgba(252, 142, 40, 0.575); 
+    color: white;
+}
+
+#beer-input {
+    display: flex;
+    font-style: italic;
+    font-size: 14px;
+    color: rgb(128, 128, 128);  
+    height: 25px;
+    width: 205px;
+    border-radius: 7px;
+    padding-left: 5px;
+}
+
+#beer-search > input {
+    margin: 2%;
+}
+
+/* #beer-rating {
+    width: 180px;
+    align-self: center;
+} */
+
+#card-section {
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+
+#beer-cards {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.beer-card {
+    display: inline-flex;
+    background-color: rgb(214, 105, 3);
+    align-content: center;
+    width: 320px;
+    height: 360px;
+    margin: 10px;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: -1px 1px 5px 2px rgba(128, 128, 128, 0.521);
+    transition: all 0.2s;
+}
+
+.beer-card:hover {
+    transform: scale(1.03);
+}
+
+.beer-info > h1 {
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 7px;
+    padding-top: 12px;
+    color: rgba(150, 72, 0, 0.801);
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+}
+
+.beer-info {
+    display: block;
+    background-color: rgba(252, 231, 193, 0.8);
+    align-self: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+    height: 85%;
+    overflow: auto;
+    border-radius: 4px;
+}
+
+.beer-info > h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+}
+
+.beer-info > h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+}
+
