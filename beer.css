@@ -89,7 +89,7 @@ html, body {
 
 #favorites-button{
     display: block;
-    background-image: url("Beer mug.png");
+    background-image: url("Beer mug (dark gray).png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
@@ -138,7 +138,7 @@ html, body {
 
 #logout-button{
     display: flex;
-    background-image: url("Beer mug.png");
+    background-image: url("Beer mug (dark gray).png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
@@ -185,7 +185,7 @@ label {
 }
 
 #add-beer > h2 {
-    color: rgba(150, 72, 0, 0.801);
+    color: rgba(150, 72, 0);
     width: 70%;
     font-family: 'Pacifico', cursive;
     font-weight: bold;
@@ -357,15 +357,15 @@ label {
 }
 
 .beer-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .beer-info > h1 {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     padding-bottom: 7px;
-    padding-top: 12px;
-    color: rgba(150, 72, 0, 0.801);
+    padding-top: 8px;
+    color: rgba(150, 72, 0);
     width: 100%;
     font-family: 'Pacifico', cursive;
 }
@@ -400,3 +400,12 @@ label {
     margin-top: 2px;
 }
 
+.card-fav-button {
+    display: flex;
+    height: 20px;
+    width: 20px;
+}
+
+.card-fav-button:hover {
+    transform: scale(1.2);
+}

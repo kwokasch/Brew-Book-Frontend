@@ -20,14 +20,18 @@ function createBeerCards(beers){
         const beerRating = document.createElement('h3')
         const beerCommentsLabel = document.createElement('h1')
         const beerComments = document.createElement('p')
+        const favButton = document.createElement('img')
         // const beerImage = document.createElement('div')
         // const breweryImage = document.createElement('div')
 
+        beerInfo.id = beer.id
         beerCard.className = 'beer-card'
         beerVariety.className = 'beer-variety'
         beerRating.className = 'beer-rating'
         beerComments.className = 'beer-comments'
         beerInfo.className = 'beer-info'
+        favButton.className = 'card-fav-button'
+        favButton.src = "Heart.png"
         // beerImage.className = 'beer-image-box'
         // breweryImage.className = 'brewery-image-box'
 
@@ -40,7 +44,7 @@ function createBeerCards(beers){
         beerCommentsLabel.innerText = "Comments:"
         beerComments.innerText = beer.comments
 
-        beerInfo.append(beerNameLabel, beerName, beerVarietyLabel, beerVariety, beerRatingLabel, beerRating, beerCommentsLabel, beerComments)
+        beerInfo.append(favButton, beerNameLabel, beerName, beerVarietyLabel, beerVariety, beerRatingLabel, beerRating, beerCommentsLabel, beerComments)
         beerCard.append(beerInfo)
         beerCards.append(beerCard)
     })
