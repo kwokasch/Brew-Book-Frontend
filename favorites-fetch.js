@@ -10,5 +10,5 @@ fetch(`http://localhost:3000/users/${id}`, {
 }).then(response => response.json())
 .then(response => response.beers)
 .then(response => {
-    createBeerCards(response)
+    createFavCards(response)
 })

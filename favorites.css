@@ -110,3 +110,9 @@ html, body {
     margin-top: -10px;
     margin-right: 10px;
 }
+
+.delete-fav-button {
+    display: flex;
+    height: 20px;
+    width: 20px;
+}

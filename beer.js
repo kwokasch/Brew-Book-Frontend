@@ -40,8 +40,7 @@ function createBeerCards(beers){
         beerCommentsLabel.innerText = "Comments:"
         beerComments.innerText = beer.comments
 
-        beerInfo.append(favButton)
-        beerInfo.append(beerNameLabel, beerName, beerVarietyLabel, beerVariety, beerRatingLabel, beerRating, beerCommentsLabel, beerComments)
+        beerInfo.append(favButton, beerNameLabel, beerName, beerVarietyLabel, beerVariety, beerRatingLabel, beerRating, beerCommentsLabel, beerComments)
         beerCard.append(beerInfo)
         beerCards.append(beerCard)
     })
@@ -85,7 +84,6 @@ beerSearch.addEventListener("submit", (event) => {
     }).then(response => response.json())
     .then(response => {
         input.value = response["message"]
-        input.classList.add("error")
     })
 })
 
@@ -96,6 +94,33 @@ logout.addEventListener("click", (event) => {
     localStorage.removeItem("token")
     localStorage.removeItem("user_id")
     window.location.href="index.html"
+})
+
+const allBeers = document.querySelector('#beer-cards')
+
+allBeers.addEventListener("click", (event) =>{
+    if (event.target.className = "card-fav-button"){
+
+        fetch(`http://localhost:3000/favorites`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_id: localStorage.getItem('user_id'),
+                beer_id: event.target.parentElement.id
+            })
+        }).then(response => response.json())
+    } 
+})
+
+
+const favorites = document.getElementById('favorites-button')
+
+favorites.addEventListener("click", (event) => {
+    event.preventDefault()
+
+    window.location.href="favorites.html"
 })
 
 retrieveBeers()
