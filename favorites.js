@@ -13,7 +13,14 @@ allBeers.addEventListener("click", (event) =>{
                 beer_id: event.target.parentElement.id
             })
         }).then(response => response.json())
-        .then(console.log)
     } 
 })
 
+const favorites = document.getElementById('favorites-button')
+
+favorites.addEventListener("click", (event) => {
+    event.preventDefault()
+
+    window.location.href="favorites.html"
+    
+})

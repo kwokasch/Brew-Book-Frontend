@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(event.target)
 
         if (event.target.className = "signup-submit") {
+            signInUser()
+        }
 
+        if (event.target.className = "login-submit") {
+            logInUser()
+        }
+
+        function signInUser () {
             fetch(`http://localhost:3000/users`, {
                 method: 'POST',
                 headers: {
@@ -27,10 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
-        if (event.target.className = "login-submit") {
-            logInUser()
-        }
-
         function logInUser () {
             fetch(`http://localhost:3000/auth/login`, {
                 method: 'POST',
@@ -43,9 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             }).then(response => response.json())
             .then(response => {
-                localStorage.setItem("token", response.token)
-                localStorage.setItem("user_id", response.id)
-                window.location.href="beer.html"
+                if (!response.error){
+                    localStorage.setItem("token", response.token)
+                    localStorage.setItem("user_id", response.user_id)
+                    window.location.href="beer.html"
+                } else {
+                    console.log(response.error)
+                }
             })
         }
 

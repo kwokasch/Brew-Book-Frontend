@@ -21,8 +21,6 @@ function createBeerCards(beers){
         const beerCommentsLabel = document.createElement('h1')
         const beerComments = document.createElement('p')
         const favButton = document.createElement('img')
-        // const beerImage = document.createElement('div')
-        // const breweryImage = document.createElement('div')
 
         beerInfo.id = beer.id
         beerCard.className = 'beer-card'
@@ -32,8 +30,6 @@ function createBeerCards(beers){
         beerInfo.className = 'beer-info'
         favButton.className = 'card-fav-button'
         favButton.src = "Heart.png"
-        // beerImage.className = 'beer-image-box'
-        // breweryImage.className = 'brewery-image-box'
 
         beerNameLabel.innerText = "Beer Name:"
         beerName.innerText = beer.name.toUpperCase()
@@ -69,7 +65,7 @@ addBeer.addEventListener("submit", (event) => {
             rating: formData.get("rating"),
             comments: formData.get("comments"),
         })
-    })
+    }).then(window.location.href="beer.html")
 })
 
 const beerSearch = document.getElementById('beer-search')
@@ -84,6 +80,16 @@ beerSearch.addEventListener("submit", (event) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(beerBody)
-    })
+    }).then(window.location.href="beer.html")
 })
+
+const logout = document.getElementById('logout-button')
+
+logout.addEventListener("click", (event) => {
+    event.preventDefault()
+    localStorage.removeItem("token")
+    localStorage.removeItem("user_id")
+    window.location.href="index.html"
+})
+
 retrieveBeers()
