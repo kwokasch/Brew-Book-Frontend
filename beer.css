@@ -1,3 +1,7 @@
+/* * {
+    box-sizing: border-box;
+} */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,13 +49,14 @@ table {
 /* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
 @import url('https://fonts.googleapis.com/css?family=Raleway:500,500i,600,600i,700,700i,800,800i&display=swap');
 
-html, body {
-    height: 100%;
-    width: 100%;
-    background-image: url("Stripes.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    min-height: 100vh;
     
+    /* width: 100%; */
+    background-image: url("Stripes.png");
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    /* background-size: cover; */
 }
 
 #logo {
@@ -271,6 +276,7 @@ label {
     width: 0px;
 }
 
+
 #beer-search > h2 {
     color: rgba(150, 72, 0, 0.801);
     width: 100%;
@@ -312,9 +318,9 @@ label {
 
 #beer-input {
     display: flex;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 14px;
-    color: rgb(128, 128, 128);  
+    /* color: rgb(128, 128, 128);   */
     height: 25px;
     width: 205px;
     border-radius: 7px;
@@ -332,7 +338,9 @@ label {
 
 #card-section {
     display: flex;
-    width: 100%;
+    /* background-image: url("Stripes.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
     height: 100%;
 }
 
@@ -342,6 +350,7 @@ label {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    height: 100%;
 }
 
 .beer-card {
@@ -410,4 +419,8 @@ label {
 
 .card-fav-button:hover {
     transform: scale(1.2);
+}
+
+.error {
+    font-weight: bold;
 }

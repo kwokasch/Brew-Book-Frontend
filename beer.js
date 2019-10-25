@@ -40,7 +40,8 @@ function createBeerCards(beers){
         beerCommentsLabel.innerText = "Comments:"
         beerComments.innerText = beer.comments
 
-        beerInfo.append(favButton, beerNameLabel, beerName, beerVarietyLabel, beerVariety, beerRatingLabel, beerRating, beerCommentsLabel, beerComments)
+        beerInfo.append(favButton)
+        beerInfo.append(beerNameLabel, beerName, beerVarietyLabel, beerVariety, beerRatingLabel, beerRating, beerCommentsLabel, beerComments)
         beerCard.append(beerInfo)
         beerCards.append(beerCard)
     })
@@ -69,10 +70,11 @@ addBeer.addEventListener("submit", (event) => {
 })
 
 const beerSearch = document.getElementById('beer-search')
+
 beerSearch.addEventListener("submit", (event) => {
     event.preventDefault()
-    const input = document.getElementById('beer-input').value
-    const beerBody = {beer: {name: input}}
+    let input = document.getElementById('beer-input')
+    const beerBody = {beer: {name: input.value}}
 
     fetch(`http://localhost:3000/searches`, {
         method: 'POST',
@@ -80,7 +82,11 @@ beerSearch.addEventListener("submit", (event) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(beerBody)
-    }).then(window.location.href="beer.html")
+    }).then(response => response.json())
+    .then(response => {
+        input.value = response["message"]
+        input.classList.add("error")
+    })
 })
 
 const logout = document.getElementById('logout-button')
