@@ -111,9 +111,9 @@ allBeers.addEventListener("click", (event) =>{
                 beer_id: event.target.parentElement.id
             })
         }).then(response => response.json())
+    
     } 
 })
-
 
 const favorites = document.getElementById('favorites-button')
 
