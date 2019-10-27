@@ -65,7 +65,7 @@ addBeer.addEventListener("submit", (event) => {
             rating: formData.get("rating"),
             comments: formData.get("comments"),
         })
-    }).then(window.location.href="beer.html")
+    }).then(res => window.location.href="beer.html")
 })
 
 const beerSearch = document.getElementById('beer-search')
@@ -82,9 +82,8 @@ beerSearch.addEventListener("submit", (event) => {
         },
         body: JSON.stringify(beerBody)
     }).then(response => response.json())
-    .then(response => {
-        input.value = response["message"]
-    })
+    .then(response => input.value = response["message"])
+    // .then(res => window.location.href="beer.html")
 })
 
 const logout = document.getElementById('logout-button')
