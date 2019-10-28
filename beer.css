@@ -53,14 +53,14 @@ body {
     min-height: 100vh;
     
     /* width: 100%; */
-    background-image: url("Stripes.png");
+    background-image: url("images/Stripes.png");
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     /* background-size: cover; */
 }
 
 #logo {
-    background-image: url("Logo.png");
+    background-image: url("images/Logo.png");
     align-content: center;
     background-size: cover;
     background-position: center;
@@ -70,7 +70,7 @@ body {
 }
 
 #nav-bar {
-    background-image: url("Banner.png");
+    background-image: url("images/Banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -94,7 +94,7 @@ body {
 
 #favorites-button{
     display: block;
-    background-image: url("Beer mug (dark gray).png");
+    background-image: url("images/Beer mug (dark gray).png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
@@ -143,7 +143,7 @@ body {
 
 #logout-button{
     display: flex;
-    background-image: url("Beer mug (dark gray).png");
+    background-image: url("images/Beer mug (dark gray).png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;

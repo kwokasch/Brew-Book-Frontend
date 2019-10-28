@@ -48,14 +48,14 @@ table {
 html, body {
     height: 100%;
     width: 100%;
-    background-image: url("Stripes.png");
+    background-image: url("images/Stripes.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     
 }
 
 #logo {
-    background-image: url("Logo.png");
+    background-image: url("images/Logo.png");
     align-content: center;
     background-size: cover;
     background-position: center;
@@ -65,7 +65,7 @@ html, body {
 }
 
 #nav-bar {
-    background-image: url("Banner.png");
+    background-image: url("images/Banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -81,7 +81,7 @@ html, body {
 
 #back-button{
     display: flex;
-    background-image: url("Beer mug (dark gray).png");
+    background-image: url("images/Beer mug (dark gray).png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;

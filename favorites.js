@@ -22,7 +22,7 @@ function createFavCards(beers){
         beerComments.className = 'beer-comments'
         beerInfo.className = 'beer-info'
         deleteButton.className = 'delete-fav-button'
-        deleteButton.src = 'Delete.png'
+        deleteButton.src = 'images/Delete.png'
         deleteButton.addEventListener('click', () => deleteFav(event, beer.id))
 
         beerNameLabel.innerText = "Beer Name:"

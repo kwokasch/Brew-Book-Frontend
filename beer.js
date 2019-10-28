@@ -29,7 +29,7 @@ function createBeerCards(beers){
         beerComments.className = 'beer-comments'
         beerInfo.className = 'beer-info'
         favButton.className = 'card-fav-button'
-        favButton.src = "Heart.png"
+        favButton.src = "images/Heart.png"
 
         beerNameLabel.innerText = "Beer Name:"
         beerName.innerText = beer.name.toUpperCase()
